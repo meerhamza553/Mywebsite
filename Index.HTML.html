@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architique | Marble Collection</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:#fff;
+}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+header h1{
+font-size:60px;
+letter-spacing:3px;
+}
+
+header p{
+margin:20px 0;
+font-size:20px;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:white;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+overflow:hidden;
+border-radius:15px;
+background:#222;
+transition:.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(212,175,55,.3);
+}
+
+.card img{
+width:100%;
+height: 250px;
+object-fit:cover;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card h3{
+padding:10px;
+text-align:center;
+}
+
+.contact{
+text-align:center;
+background:#1a1a1a;
+padding:60px 20px;
+}
+
+.contact h2{
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+color:#aaa;
+}
+.contact form{
+max-width:700px;
+margin:auto;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#2b2b2b;
+color:white;
+font-size:16px;
+}
+
+.contact button{
+cursor:pointer;
+}
+/* ==============================
+   RESPONSIVE DESIGN
+   Mobile + Tablet + Desktop
+================================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    /* Navbar */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Cards */
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    /* Contact Section */
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        display: block;
+    }
+
+}
+
+
+/* Large Screens */
+@media (min-width:1200px){
+
+    .container{
+        max-width:1200px;
+        margin:auto;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div>
+<h1>ARCHITIQUE</h1>
+
+<p>Luxury Marble Collection & Interior Designs</p>
+
+<a href="#collection" class="btn">View Collection</a>
+</div>
+
+</header>
+<!-- ================= ABOUT US ================= -->
+
+<section id="about" style="padding:80px 10%; background:#181818; color:#fff;">
+
+    <h2 class="title">About Architique</h2>
+
+    <p style="max-width:900px; margin:auto; text-align:center; line-height:1.9; font-size:18px; color:#ddd;">
+        <strong style="color:#d4af37;">Architique</strong> is a premium marble and interior design company dedicated to transforming homes, villas, offices, and commercial spaces into elegant masterpieces. We specialize in luxury marble flooring, CNC marble designs, custom marble patterns, wall cladding, staircases, kitchens, bathrooms, TV walls, feature walls, and decorative stone installations. Our experienced team combines expert craftsmanship with high-quality materials to create timeless and durable designs that reflect style, luxury, and perfection.
+        <br><br>
+        At Architique, every project is completed with precision and attention to detail. Whether you are building a new home or renovating an existing space, we provide complete marble solutions—from design consultation to final installation. Our goal is to deliver outstanding quality, modern aesthetics, and customer satisfaction in every project we undertake.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:50px;">
+
+        <div class="card">
+            <h3>Luxury Marble Flooring</h3>
+        </div>
+
+        <div class="card">
+            <h3>CNC Marble Designs</h3>
+        </div>
+
+        <div class="card">
+            <h3>Custom Marble Patterns</h3>
+        </div>
+
+        <div class="card">
+            <h3>Wall Cladding</h3>
+        </div>
+
+        <div class="card">
+            <h3>Kitchen Countertops</h3>
+        </div>
+
+        <div class="card">
+            <h3>Bathroom Marble</h3>
+        </div>
+
+        <div class="card">
+            <h3>Staircase Installation</h3>
+        </div>
+
+        <div class="card">
+            <h3>Interior & Exterior Marble</h3>
+        </div>
+
+    </div>
+
+</section>
+<section id="collection">
+
+<h2 class="title">Our Marble Collection</h2>
+<div class="gallery">
+
+<div class="card">
+<img src="images/NEWP001.jpg" alt="Vanity WAll">
+<h3>Vanity Wall</h3>
+</div>
+
+<div class="card">
+<img src="images/CNC 01.PNG" alt="CNC Marble Carving">
+<h3>CNC Marble Carving</h3>
+</div>
+
+<div class="card">
+<img src="images/WAter Get 01.PNG" alt="Waterjet Marble Pattern">
+<h3>Waterjet Marble Pattern</h3>
+</div>
+
+<div class="card">
+<img src="images/MArble MAdelion 01.PNG" alt="Marble Medallion">
+<h3>Marble Medallion Design</h3>
+</div>
+
+<div class="card">
+<img src="images/Stair case01.PNG" alt="Grand Staircase">
+<h3>Luxury Staircase</h3>
+</div>
+
+<div class="card">
+<img src="images/Kitchen Counter Tops.PNG" alt="Kitchen Counter">
+<h3>Kitchen Countertops</h3>
+</div>
+
+<div class="card">
+<img src="images/VIEW K01.jpg" alt="Bathroom Marble">
+<h3>Luxury Bathroom</h3>
+</div>
+
+<div class="card">
+<img src="images/Media WAll 01.PNG" alt="TV Wall">
+<h3>Marble Media Wall</h3>
+</div>
+
+<div class="card">
+<img src="images/Feature Wall 01.PNG" alt="Feature Wall">
+<h3>Feature Wall</h3>
+</div>
+
+<div class="card">
+<img src="images/Wall Clading 01.PNG" alt="Wall Cladding">
+<h3>Wall Cladding</h3>
+</div>
+
+<div class="card">
+<img src="images/Book MAtch 01.PNG" alt="Bookmatched Marble">
+<h3>Bookmatched Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/onyx Collection 01.PNG" alt="Onyx Marble">
+<h3>Onyx Collection</h3>
+</div>
+
+<div class="card">
+<img src="images/Italian 01.PNG" alt="Italian Marble">
+<h3>Italian Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/Black 01.PNG" alt="Black Marble">
+<h3>Black Marble Collection</h3>
+</div>
+
+<div class="card">
+<img src="images/Reception.PNG" alt="Reception">
+<h3>Reception Design</h3>
+</div>
+
+<div class="card">
+<img src="images/Villa 01.PNG" alt="Luxury Villa">
+<h3>Villa Marble Interior</h3>
+</div>
+
+</div>
+<div class="gallery">
+
+<div class="card">
+<img src="images/Ittalian White 01.PNG">
+<h3>Italian White Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/Luxury Flooring.PNG">
+<h3>Luxury Floor Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/NEWP002.jpg">
+<h3>Vanity</h3>
+</div>
+
+<div class="card">
+<img src="images/Kitchen counte 02.PNG">
+<h3>Kitchen Counter</h3>
+</div>
+
+<div class="card">
+<img src="images/MASTER  BATH6.png">
+<h3>Bathroom Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/MASTER  BATH8.png">
+<h3>Bathroom Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/BAlck 02.PNG">
+<h3>Black Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/Grey 02.PNG">
+<h3>Grey Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/coffee Wood 01.PNG">
+<h3>Onyx Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/Travertine 01.PNG">
+<h3>Travertine Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/Dark 01.PNG">
+<h3>Brown Marble</h3>
+</div>
+
+<div class="card">
+<img src="images/premium Marble 01.PNG">
+<h3>Premium Granite</h3>
+</div>
+</div>
+
+</section>
+<!-- ===================== VISIT ARCHITIQUE ===================== -->
+
+<section id="visit" style="padding:100px 8%;background:linear-gradient(135deg,#0b0b0b,#1b1b1b);color:#fff;">
+
+<div style="text-align:center;max-width:1000px;margin:auto;">
+
+<h5 style="color:#d4af37;letter-spacing:5px;font-size:18px;">
+WELCOME TO ARCHITIQUE
+</h5>
+
+<h1 style="font-size:55px;font-weight:700;margin:20px 0;">
+Visit Our Luxury Marble Studio
+</h1>
+
+<p style="font-size:19px;line-height:2;color:#d5d5d5;">
+
+Every masterpiece begins with a conversation. At <span style="color:#d4af37;font-weight:bold;">Architique</span>, we transform ordinary spaces into extraordinary works of art through premium marble craftsmanship, elegant CNC carvings, luxury flooring, waterjet patterns, designer staircases, feature walls, and custom stone solutions.
+
+Our showroom is designed to inspire homeowners, architects, builders, interior designers, and commercial clients with exclusive marble collections and creative design ideas. Whether your project is modern or classic, our experienced professionals are ready to guide you from concept to completion with exceptional quality and attention to every detail.
+
+We invite you to visit our office, explore our latest marble collections, discuss your project over a cup of coffee, and experience the elegance that defines every Architique creation.
+
+</p>
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:70px;">
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;transition:.4s;">
+<h2>🏢 Company</h2>
+<p style="margin-top:15px;color:#ddd;font-size:17px;">
+Architique<br>
+Luxury Marble & Interior Solutions
+</p>
+</div>
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;">
+<h2>📍 Visit Our Office</h2>
+<p style="margin-top:15px;color:#ddd;">
+Your Office Address Here<br>
+DHA Phase-05 144CCA First Floor Lahore, Punjab, Pakistan
+</p>
+</div>
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;">
+<h2>📞 Contact</h2>
+<p style="margin-top:15px;color:#ddd;">
+Phone : +92300-8454393<br>
+WhatsApp : +92300-4241504
+</p>
+</div>
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;">
+<h2>📧 Email</h2>
+<p style="margin-top:15px;color:#ddd;">
+aliii393@gmail.com
+</p>
+</div>
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;">
+<h2>🕒 Working Hours</h2>
+<p style="margin-top:15px;color:#ddd;">
+Monday – Saturday<br>
+9:00 AM – :00 PM
+</p>
+</div>
+
+<div style="background:#1f1f1f;padding:35px;border-radius:20px;border-top:4px solid #d4af37;">
+<h2>🤝 Let's Build Together</h2>
+<p style="margin-top:15px;color:#ddd;">
+Your dream project deserves premium craftsmanship. Contact Architique today and let us transform your ideas into timeless marble masterpieces.
+</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:70px;">
+
+<a href="https://maps.app.goo.gl/8B2d9Rw79Z5x2r1y9?g_st=ac"
+style="padding:18px 45px;background:#d4af37;color:#111;text-decoration:none;border-radius:50px;font-size:18px;font-weight:bold;display:inline-block;transition:.4s;">
+
+📍 Get Directions to Our Office
+
+</a>
+
+</div>
+
+</section>
+
+</div>
+© 2026 Architique | All Rights Reserved
+
+</footer>
+</body>
+</html>
